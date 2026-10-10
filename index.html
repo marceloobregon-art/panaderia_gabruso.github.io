@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabruso Panadería | Pan y postres artesanales en Huánuco</title>
+  <meta name="description" content="Catálogo de panificados y postres artesanales de Gabruso Panadería, en Santa María del Valle, Huánuco. Arma tu pedido y envíalo por WhatsApp.">
+  <meta name="theme-color" content="#221915">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Gabruso Panadería, ir al inicio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Gabruso <small>Panadería</small></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menú</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="menu" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#pedidos">Pedidos</a></li>
+        </ul>
+      </nav>
+
+      <a class="order-pill" href="#pedidos">Mi pedido <span id="contador-pedido" aria-live="polite">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO: hero -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Pan y postres artesanales, recién salidos del horno</h1>
+          <p class="lead">Elige del catálogo, arma tu pedido y envíalo por WhatsApp. Nosotros te confirmamos el precio y la hora de entrega.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn btn-ghost" href="#pedidos">Hacer un pedido</a>
+          </div>
+          <p class="hero-place">Santa María del Valle, Huánuco</p>
+        </div>
+
+        <div class="hero-art">
+          <svg class="oven" viewBox="0 0 400 470" role="img" aria-label="Boca de un horno de ladrillo con fuego encendido y dos panes al frente">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="92%" r="95%">
+                <stop offset="0" stop-color="#F59E0B"/>
+                <stop offset=".4" stop-color="#B45309"/>
+                <stop offset=".75" stop-color="#5A2A12"/>
+                <stop offset="1" stop-color="#2A1B14"/>
+              </radialGradient>
+            </defs>
+            <path d="M30 450V200a170 170 0 0 1 340 0v250z" fill="#2A1B14"/>
+            <path d="M48 450V200a152 152 0 0 1 304 0V450" fill="none" stroke="#B45309" stroke-width="32" stroke-dasharray="28 6"/>
+            <path d="M48 450V200a152 152 0 0 1 304 0V450" fill="none" stroke="#D97706" stroke-width="32" stroke-opacity=".45" stroke-dasharray="28 40"/>
+            <path d="M64 450V200a136 136 0 0 1 272 0V450z" fill="url(#glow)"/>
+            <g class="flame">
+              <path d="M200 425c-46-6-66-48-44-92 8 20 22 28 32 30-10-40 8-78 40-104-2 38 28 52 34 90 6 40-18 82-62 76z" fill="#FBBF24"/>
+              <path d="M200 425c-46-6-66-48-44-92 8 20 22 28 32 30-10-40 8-78 40-104-2 38 28 52 34 90 6 40-18 82-62 76z" fill="#FEF3C7" transform="translate(200 425) scale(.55) translate(-200 -425)"/>
+            </g>
+            <rect x="64" y="438" width="272" height="12" fill="#221915"/>
+            <g fill="#3A1F12">
+              <ellipse cx="140" cy="430" rx="42" ry="22"/>
+              <ellipse cx="262" cy="432" rx="38" ry="20"/>
+            </g>
+            <g stroke="#D97706" stroke-width="3" stroke-linecap="round" fill="none">
+              <path d="M122 420l8 12M138 417l8 14M154 420l8 12"/>
+              <path d="M246 423l7 11M260 421l7 12M274 423l7 11"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- INICIO: productos estrella -->
+    <section class="estrellas" aria-labelledby="estrellas-titulo">
+      <div class="wrap">
+        <h2 id="estrellas-titulo">Los más pedidos</h2>
+        <div id="estrellas-lista" class="estrellas-lista"></div>
+      </div>
+    </section>
+
+    <!-- INICIO: promoción -->
+    <section class="promo" aria-labelledby="promo-titulo">
+      <div class="wrap promo-inner">
+        <div>
+          <h2 id="promo-titulo">¿Reunión, cumpleaños o evento?</h2>
+          <p>Escríbenos con anticipación y te cotizamos tortas, bocaditos y panes por mayor directamente por WhatsApp.</p>
+        </div>
+        <a class="btn btn-dark" href="#pedidos">Pedir cotización</a>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="catalogo" aria-labelledby="catalogo-titulo">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="catalogo-titulo">Catálogo</h2>
+          <p>Filtra por categoría y agrega al pedido lo que quieras llevar.</p>
+        </div>
+
+        <div class="filtros" role="group" aria-label="Filtrar productos por categoría">
+          <button type="button" class="chip" data-filtro="Todos" aria-pressed="true">Todos</button>
+          <button type="button" class="chip" data-filtro="Panes" aria-pressed="false">Panes</button>
+          <button type="button" class="chip" data-filtro="Pastelería" aria-pressed="false">Pastelería</button>
+          <button type="button" class="chip" data-filtro="Bebidas" aria-pressed="false">Bebidas</button>
+        </div>
+
+        <p id="catalogo-estado" class="catalogo-estado" aria-live="polite"></p>
+        <div id="catalogo-grid" class="grid-productos"></div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="wrap nosotros-grid">
+        <div>
+          <h2 id="nosotros-titulo">Una panadería de familia</h2>
+          <p>Gabruso es una empresa familiar de Santa María del Valle, en Huánuco. Hornea panificados y postres artesanales para los consumidores de la zona.</p>
+          <p>Hasta ahora, los pedidos llegaban por llamada y las ventas se hacían en la tienda. Esta página reúne todo el catálogo en un solo lugar para que pedir sea más rápido, también desde los alrededores.</p>
+        </div>
+        <dl class="datos">
+          <div>
+            <dt>Dónde estamos</dt>
+            <dd>Santa María del Valle, Huánuco</dd>
+          </div>
+          <div>
+            <dt>Qué hacemos</dt>
+            <dd>Panificados y postres artesanales</dd>
+          </div>
+          <div>
+            <dt>Cómo atendemos</dt>
+            <dd>En tienda, por llamada y ahora por WhatsApp</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PEDIDOS -->
+    <section id="pedidos" class="pedidos" aria-labelledby="pedidos-titulo">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="pedidos-titulo">Haz tu pedido</h2>
+          <p>Revisa tu lista, completa tus datos y envía el pedido por WhatsApp. El precio final lo confirmamos en la conversación.</p>
+        </div>
+
+        <div class="pedidos-grid">
+          <div class="resumen" aria-labelledby="resumen-titulo">
+            <h3 id="resumen-titulo">Tu lista</h3>
+            <div id="resumen-lista"></div>
+            <p class="total" id="resumen-total" hidden>Total referencial: <strong id="total-monto">S/ 0.00</strong></p>
+          </div>
+
+          <form id="form-pedido" class="formulario" novalidate>
+            <h3>Tus datos</h3>
+
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="error-nombre">
+              <p class="error" id="error-nombre" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="telefono">Celular</label>
+              <input id="telefono" name="telefono" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="987654321" required aria-describedby="ayuda-telefono error-telefono">
+              <p class="ayuda" id="ayuda-telefono">9 dígitos, empieza con 9.</p>
+              <p class="error" id="error-telefono" role="alert"></p>
+            </div>
+
+            <fieldset class="campo entrega">
+              <legend>¿Cómo recibes tu pedido?</legend>
+              <label class="opcion"><input type="radio" name="entrega" value="Recojo en tienda" checked> Recojo en tienda</label>
+              <label class="opcion"><input type="radio" name="entrega" value="Delivery"> Delivery</label>
+            </fieldset>
+
+            <div class="campo" id="campo-direccion" hidden>
+              <label for="direccion">Dirección de entrega</label>
+              <input id="direccion" name="direccion" type="text" autocomplete="street-address" aria-describedby="error-direccion">
+              <p class="error" id="error-direccion" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="fecha">Fecha de recojo o entrega</label>
+              <input id="fecha" name="fecha" type="date" required aria-describedby="error-fecha">
+              <p class="error" id="error-fecha" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="notas">Notas (opcional)</label>
+              <textarea id="notas" name="notas" rows="3" maxlength="200" aria-describedby="error-notas"></textarea>
+              <p class="error" id="error-notas" role="alert"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar pedido por WhatsApp</button>
+            <p id="estado-envio" class="estado" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>Gabruso Panadería</strong><br>Santa María del Valle, Huánuco</p>
+      <p>Proyecto académico de Desarrollo de Aplicaciones Web<br>Facultad de Ingeniería Industrial, UNMSM. Grupo 6, “Los chambeadores”.</p>
+      <p class="copy">© <span id="anio"></span> Gabruso Panadería</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
