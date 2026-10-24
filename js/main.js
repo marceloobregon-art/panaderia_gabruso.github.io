@@ -378,5 +378,36 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarResumen();
   iniciarFormulario();
   iniciarMenu();
+  iniciarLogin();
   $("#anio").textContent = new Date().getFullYear();
 });
+
+
+/* ---------- Ventana de inicio de sesión ---------- */
+function iniciarLogin() {
+  const dialogo = $("#dialogo-login");
+  const abrir = $("#abrir-login");
+  const cerrar = $("#cerrar-login");
+  const form = $("#form-login");
+  const mensaje = $("#login-mensaje");
+
+  if (!dialogo || !abrir || !cerrar || !form || !mensaje) return;
+
+  abrir.addEventListener("click", () => {
+    mensaje.textContent = "El acceso seguro debe configurarse antes de habilitar cuentas.";
+    mensaje.classList.remove("error");
+    dialogo.showModal();
+    $("#login-correo").focus();
+  });
+
+  cerrar.addEventListener("click", () => dialogo.close());
+  dialogo.addEventListener("click", (e) => {
+    if (e.target === dialogo) dialogo.close();
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    mensaje.textContent = "La pantalla está preparada, pero aún falta conectar un servicio de autenticación seguro. No se ha iniciado sesión.";
+    mensaje.classList.add("error");
+  });
+}
