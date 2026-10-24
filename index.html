@@ -37,6 +37,10 @@
       </nav>
 
       <a class="order-pill" href="#pedidos">Mi pedido <span id="contador-pedido" aria-live="polite">0</span></a>
+      <button class="login-pill" id="abrir-login" type="button" aria-haspopup="dialog" aria-controls="dialogo-login">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+        <span>Iniciar sesión</span>
+      </button>
     </div>
   </header>
 
@@ -221,6 +225,31 @@
     </div>
   </footer>
 
+  <dialog class="login-dialog" id="dialogo-login" aria-labelledby="login-titulo">
+    <div class="login-dialog-head">
+      <div>
+        <p class="login-eyebrow">Gabruso Panadería</p>
+        <h2 id="login-titulo">Bienvenido</h2>
+        <p>Ingresa a tu cuenta para continuar.</p>
+      </div>
+      <button class="login-cerrar" id="cerrar-login" type="button" aria-label="Cerrar inicio de sesión">×</button>
+    </div>
+    <form id="form-login" class="login-form">
+      <div class="campo">
+        <label for="login-correo">Correo electrónico</label>
+        <input id="login-correo" name="correo" type="email" autocomplete="username" placeholder="tu@correo.com" required>
+      </div>
+      <div class="campo">
+        <label for="login-clave">Contraseña</label>
+        <input id="login-clave" name="clave" type="password" autocomplete="current-password" placeholder="Tu contraseña" required>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+      <p id="login-mensaje" class="login-mensaje" role="status">El acceso seguro debe configurarse antes de habilitar cuentas.</p>
+    </form>
+  </dialog>
+
   <script src="js/main.js"></script>
 </body>
 </html>
+
+ 
